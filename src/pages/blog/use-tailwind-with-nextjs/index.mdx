@@ -1,0 +1,106 @@
+import { andreaskeller } from "@/authors";
+import image from "./use-tailwind-with-nextjs.png";
+
+export const meta = {
+  title: "Use Tailwind with Next.js",
+  description: `Detailed instructions on how to use Tailwind in a Next.js app`,
+  date: "2020-08-09T00:00:00.000Z",
+  authors: [andreaskeller],
+  image,
+};
+
+<!--excerpt-->
+
+Detailed instructions on how to use Tailwind in a Next.js app.
+
+<!--/excerpt-->
+
+## Start a new Next.js app with Tailwind
+
+If you start a new app the fastest way to get started is with this single command.
+
+```bash
+npx create-next-app --example with-tailwindcss my-new-project
+# or
+yarn create next-app --example with-tailwindcss my-new-project
+```
+
+This creates a new [Next.js](https://nextjs.org) app already setup to use [Tailwind](https://tailwindcss.com) including purging unused CSS and some other optimizations.
+
+## Add Tailwind to an existing app
+
+To add Tailwind to an existing Next.js app follow these steps:
+
+```bash
+npm install --save tailwindcss
+# or
+yarn add tailwindcss
+```
+
+Create a postcss.config.js file and add Tailwind as a plugin:
+
+```js
+module.exports = {
+  plugins: ["tailwindcss"],
+};
+```
+
+Create a CSS file (e.g. styles/index.css) and use the @tailwind directive to inject Tailwind's styles into your CSS:
+
+```css
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+```
+
+Import this CSS file into your pages/\_app.js. Create it, if you haven't already.
+
+```jsx
+import "../styles/index.css";
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
+```
+
+With this minimal setup you are already up and running and can style your app with Tailwind. But you likely want to customise your Tailwind configuration. For that run:
+
+```bash
+npx tailwindcss init
+```
+
+This will create a minimal `tailwind.config.js` file at the root of your project. To learn more about Tailwind configuration go to the [Tailwind configuration documentation](https://tailwindcss.com/docs/configuration).
+
+### Purge unused Tailwind styles with PurgeCSS
+
+To ship only the Tailwind styles you are using in your app you should configure the integrated PurgeCSS. For a Next.js app add all JSX files to the `purge` property in your `tailwind.config.js` file:
+
+```js
+module.exports = {
+  purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+};
+```
+
+To ensure you don't accidentally purge important base styles, whitelist them by using PurgeCSS's [whitelisting](https://purgecss.com/whitelisting.html) feature. Change your `index.css` to this:
+
+```css
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+```
+
+One other important caveat when enabling PurgeCSS is to avoid dynamically creating class strings in your code. Read more about writing purgeable HTML [here](https://tailwindcss.com/docs/controlling-file-size/#writing-purgeable-html).
+
+Have fun styling your Next.js app with Tailwind!
