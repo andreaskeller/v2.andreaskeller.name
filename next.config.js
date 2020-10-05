@@ -109,6 +109,7 @@ module.exports = withBundleAnalyzer({
       config.entry = async () => {
         const entries = { ...(await originalEntry()) };
         entries["./scripts/build-rss.js"] = "./scripts/build-rss.js";
+        console.log(entries);
         return entries;
       };
     }
