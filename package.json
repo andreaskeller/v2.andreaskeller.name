@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export && npm run build:rss",
+    "vercel-build": "next build && next export && npm run vercel-build:rss",
     "start": "next start",
-    "build:rss": "node ./.next/server/scripts/build-rss.js"
+    "build:rss": "node .next/server/scripts/build-rss.js",
+    "vercel-build:rss": "node .next/serverless/scripts/build-rss.js"
   },
   "dependencies": {
     "@headlessui/react": "^0.1.3",
