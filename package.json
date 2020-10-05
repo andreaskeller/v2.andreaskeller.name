@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export && npm run build:rss",
     "start": "next start",
-    "build:rss": "ls \"$(pwd)/.next/server\" && node \"$(pwd)/.next/server/scripts/build-rss.js\""
+    "build:rss": "ls \"$(pwd)/.next\" && node \"$(pwd)/.next/server/scripts/build-rss.js\""
   },
   "dependencies": {
     "@headlessui/react": "^0.1.3",
