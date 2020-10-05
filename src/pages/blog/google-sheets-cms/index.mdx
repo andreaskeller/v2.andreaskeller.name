@@ -61,7 +61,7 @@ Setup a new Next.js project with Tailwind CSS already configured as we use it to
 yarn create next-app --example with-tailwindcss google-sheets-cms
 ```
 
-## Setup environment variables
+## Setup environment variables
 
 Create a file `.env.local` and add the two values client_email and private_key from your service accounts file.
 
@@ -76,7 +76,7 @@ It's important to replace the escaped `\n` characters when reading the private k
 process.env.GOOGLE_SHEETS_PRIVATE_KEY.replace(/\\n/g, "\n");
 ```
 
-## Create a function to read data from our Google Sheet
+## Create a function to read data from our Google Sheet
 
 To use the Google Sheets API we need to install the library _googleapis_. Install it by running
 
