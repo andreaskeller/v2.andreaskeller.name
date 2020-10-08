@@ -17,14 +17,6 @@ module.exports = {
   },
   purge: {
     content: ["./src/**/*.{js,mdx}", "./next.config.js"],
-    whitelist: [
-      "text-code-green",
-      "text-code-yellow",
-      "text-code-purple",
-      "text-code-red",
-      "text-code-blue",
-      "text-code-white",
-    ],
     options: {
       extractors: [
         {
@@ -42,6 +34,14 @@ module.exports = {
             return broadMatches.concat(innerMatches);
           },
         },
+      ],
+      whitelist: [
+        "text-code-green",
+        "text-code-yellow",
+        "text-code-purple",
+        "text-code-red",
+        "text-code-blue",
+        "text-code-white",
       ],
     },
   },
