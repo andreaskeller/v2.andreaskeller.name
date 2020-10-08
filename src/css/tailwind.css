@@ -4,3 +4,18 @@
 
 @tailwind components;
 @tailwind utilities;
+
+/* purgecss start ignore */
+.remark-code-title {
+  @apply text-gray-200 bg-gray-700 rounded-t-md;
+  line-height: 1.7142857;
+  margin-top: 1.7142857em;
+  padding: 0.8571429em 1.1428571em;
+}
+
+.remark-code-title + pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+}
+/* purgecss end ignore */
