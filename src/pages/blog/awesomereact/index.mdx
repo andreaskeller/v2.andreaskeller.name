@@ -1,0 +1,57 @@
+import CaseStudyDashboard from "@/components/CaseStudyDashboard";
+import { andreaskeller } from "@/authors";
+import image from "./awesomereact-1.png";
+import playlists from "./awesomereact-2.png";
+import playlistReactConf2018 from "./awesomereact-3.png";
+import conferences from "./awesomereact-4.png";
+import profilePage from "./awesomereact-5.png";
+
+export const meta = {
+  title: "Awesome React: News und Videos über React",
+  description: ``,
+  authors: [andreaskeller],
+  date: "2016-06-01T00:00:00.000Z",
+  image,
+  work: "UI/UX Design, Entwicklung Backend & Frontend",
+  technology: "JavaScript Backend, Next.js/React Frontend",
+  year: 2016,
+  websiteTitle: "awesomereact.com",
+  websiteUrl: "https://awesomereact.com",
+};
+
+<!--excerpt-->
+
+Webseite mit kurierten Videos und News zu React. Gestartet als Übungsprojekt um meine React Kenntnisse zu verbessern.
+
+<!--/excerpt-->
+
+<CaseStudyDashboard
+  lang="de"
+  work={meta.work}
+  technology={meta.technology}
+  websiteTitle={meta.websiteTitle}
+  websiteUrl={meta.websiteUrl}
+  year={meta.year}
+/>
+
+### News und Lernplatform über React
+
+Gestartet um Serverside Rendering mit React zu lernen. In den letzten zwei Jahren mehr oder weniger regelmässig neue Conference Talks, Videos und in letzter Zeit News gepostet. Technisch laufend verbessert, mittlerweile setze ich Next.js ein und konnte den ganzen komplexen Serverside Rendering Teil rauslöschen, da dieser Next.js übernimmt.
+
+Monatlich besuchen ca. 3000 verschiedene User die Seite.
+
+<img src={playlists} alt="Playlists" />
+
+Playlists zu verschiedensten React Themen
+
+<img src={playlistReactConf2018} alt="React Conf 2018" />
+
+React Conf 2018 Playlist
+
+<img src={conferences} alt="Konferenzen" />
+
+Seite mit Videos aller React Konferenzen
+
+<img src={profilePage} alt="Profilseite" />
+
+Profilseite mit Twitter Bio und Liste aller Videos

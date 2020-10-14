@@ -1,0 +1,67 @@
+import CaseStudyDashboard from "@/components/CaseStudyDashboard";
+import { andreaskeller } from "@/authors";
+import image from "./kurtli-1.png";
+import welcome from "./kurtli-5.png";
+import feed from "./kurtli-6.png";
+import effinger from "./kurtli-3.png";
+import demo from "./kurtli-4.png";
+
+export const meta = {
+  title: "Kurtli",
+  description: `Kurtli publiziert deine Bilder auf deiner Webseite`,
+  date: "2018-01-01T00:00:00.000Z",
+  authors: [andreaskeller],
+  image,
+  work: "Frontend & Backend",
+  technology: "Slack App, Firebase Functions, TypeScript, Hugo, Preact",
+  year: 2018,
+  websiteTitle: "www.kurtli.ch",
+  websiteUrl: "https://www.kurtli.ch",
+};
+
+<!--excerpt-->
+
+Kurtli publiziert deine Bilder auf deiner Webseite.
+
+<!--/excerpt-->
+
+<CaseStudyDashboard
+  lang="de"
+  work={meta.work}
+  technology={meta.technology}
+  websiteTitle={meta.websiteTitle}
+  websiteUrl={meta.websiteUrl}
+  year={meta.year}
+/>
+
+### Kurtli publiziert deine Bilder auf deiner Webseite
+
+Kurtli entstand aus einem Bedürfnis des Effinger Coworking Space heraus. Sie suchten eine einfache Möglichkeit zu dokumentieren was alles in der Community und im Space läuft. Der Effinger nutzt Slack als Kommunikationsplattform, so hatte Marco Jakob die Idee Slack dafür zu nutzen anstatt ein weiteres Tool einzuführen. Ein erster Prototyp, damals noch Stream genannt, entstand in Zusammenarbeit mit Manuel Bürli.
+
+Die Idee war simpel. Eine Slack App um in einem Channel gepostete Bilder direkt auf der Effinger Webseite veröffentlichen zu können.
+
+Nach regem Gebrauch in der Effinger Community wollten sie diesen Stream auch anderen Communities oder Teams zur Verfügung stellen.
+
+Marco und Manuel suchten noch Verstärkung und ich stiess zum Team dazu.
+
+Die Slack App musste nochmals von Grund auf überarbeitet werden und wurde neu mittels Firebase umgesetzt. Ausserdem führten wir ein Rebranding durch und nannten den Stream fortan Kurtli.
+
+Der Kurtli Feed ist bereits bei einigen anderen Communities wie dem Tessinerplatz Coworking Space in Zürich im Einsatz.
+
+Wir sind noch letzte Unebenheiten am polieren und planen Kurtli Anfangs 2019 einer breiteren Anzahl Communities anzubieten.
+
+<img src={welcome} alt="Begrüssung Kurtli" />
+
+Begrüssung von Kurtli nach erfolgreicher Installation in Slack
+
+<img src={feed} alt="Kurtli Feed Channel" />
+
+Kurtli Feed Channel in Slack. Alle hier veröffentlichten Bilder werden auf der Webseite via Kurtli Widget angezeigt.
+
+<img src={effinger} alt="Effinger" />
+
+Kurtli Feed Widget auf der [Effinger Homepage](https://www.effinger.ch)
+
+<img src={demo} alt="Demo" />
+
+Mit Klick auf die drei letzten Bilder wird der Feed geöffnet und alle erstellten Bilder können angeschaut werden.

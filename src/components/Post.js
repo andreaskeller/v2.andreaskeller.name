@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import PageTitle from '@/components/PageTitle'
-import tinytime from 'tinytime'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { MDXProvider } from '@mdx-js/react'
+import Head from "next/head";
+import PageTitle from "@/components/PageTitle";
+import tinytime from "tinytime";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { MDXProvider } from "@mdx-js/react";
 
 const mdxComponents = {
   a: ({ className, ...props }) => (
@@ -12,15 +12,15 @@ const mdxComponents = {
       {...props}
     />
   ),
-}
+};
 
-const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
+const postDateTemplate = tinytime("{MMMM} {DD}, {YYYY}");
 
 export default function Post({ meta, children, posts }) {
-  const router = useRouter()
-  const postIndex = posts.findIndex((post) => post.link === router.pathname)
-  const previous = posts[postIndex + 1]
-  const next = posts[postIndex - 1]
+  const router = useRouter();
+  const postIndex = posts.findIndex((post) => post.link === router.pathname);
+  const previous = posts[postIndex + 1];
+  const next = posts[postIndex - 1];
 
   return (
     <article className="xl:divide-y xl:divide-gray-200">
@@ -55,8 +55,8 @@ export default function Post({ meta, children, posts }) {
         </div>
       </header>
       <div
-        className="divide-y xl:divide-y-0 divide-gray-200 xl:grid xl:grid-cols-4 xl:col-gap-6 pb-16 xl:pb-20"
-        style={{ gridTemplateRows: 'auto 1fr' }}
+        className="divide-y xl:divide-y-0 divide-gray-200 xl:grid xl:grid-cols-4 xl:gap-x-6 pb-16 xl:pb-20"
+        style={{ gridTemplateRows: "auto 1fr" }}
       >
         <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200">
           <dt className="sr-only">Authors</dt>
@@ -92,7 +92,7 @@ export default function Post({ meta, children, posts }) {
           {meta.discussion && (
             <div className="pt-6 pb-16">
               <p>
-                Want to talk about this post?{' '}
+                Want to talk about this post?{" "}
                 <a href={meta.discussion} className="font-medium text-gray-400 hover:text-gray-600">
                   Discuss this on Twitter &rarr;
                 </a>
@@ -141,5 +141,5 @@ export default function Post({ meta, children, posts }) {
         </footer>
       </div>
     </article>
-  )
+  );
 }

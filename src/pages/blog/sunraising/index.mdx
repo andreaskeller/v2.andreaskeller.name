@@ -1,0 +1,46 @@
+import CaseStudyDashboard from "@/components/CaseStudyDashboard";
+import { andreaskeller } from "@/authors";
+import image from "./sunraising-1.png";
+import roofs from "./sunraising-2.png";
+
+export const meta = {
+  title: "Sunraising: Optimierung Bestellprozess und Einführung CRM",
+  description: ``,
+  date: "2018-01-01T00:00:00.000Z",
+  authors: [andreaskeller],
+  image,
+  work: "Entwicklung von Schnittstelle zwischen Wordpress, Airtable und Bexio",
+  technology: "JavaScript, Wordpress, Airtable, Bexio",
+  year: 2018,
+  websiteTitle: "sunraising.ch",
+  websiteUrl: "https://sunraising.ch",
+};
+
+<!--excerpt-->
+
+Optimierung von Bestellprozess und automatische Erstellung von Rechnungen und Zertifikaten.
+
+<!--/excerpt-->
+
+<CaseStudyDashboard
+  lang="de"
+  work={meta.work}
+  technology={meta.technology}
+  websiteTitle={meta.websiteTitle}
+  websiteUrl={meta.websiteUrl}
+  year={meta.year}
+/>
+
+### Berner Solar Crowdfunding Initative
+
+Du willst deinen eigenen Solarstrom produzieren, hast aber kein Dach? Sunraising, die Berner Crowdfunding Initative, baut dir mit deiner einmaligen Zahlung eine Anlage im Quartier – und du bekommst 20 Jahre lang den Solarstromertrag direkt auf deiner Stromrechnung gutgeschrieben.
+
+Nach erfolgreichem Start im 2016 und etlichen erfolgreich realisierten Dächern in der Stadt Bern wollte Sunraising einige Prozesse optimieren.
+
+Die Kundenverwaltung bisher pro Dach in einer Exceldatei verwaltet wurde zusehends unübersichtlicher. Wenn eine Bestellung einging bezahlten die Kunden sofort via Payrexx. Die Dächer wurden aber erst gebaut nachdem genügend Quadratmeter finanziert wurden. So verstrichen zwischen Zahlung und Strombezug etliche Monate. Dies wollte man angehen, indem man erst Rechnungen versendet, sobald genügend Quadratmeter zusammengekommen sind und der Bau des Daches gestartet werden kann.
+
+Zusammen mit Sunraising haben wir entschieden nicht ein klassisches CRM Produkt für die Kundenverwaltung zu verwenden, da diese häufig sehr Saleslastig sind. Airtable ermöglicht uns eine Excel ähnliche Bearbeitung der Kundendaten mit API Zugriff. So können die Kundendaten direkt bei Bestelleingang aus Wordpress in Airtable importiert oder aktualisiert werden.
+
+Auch Bexio, Buchhaltungssoftware, haben wir unter anderem ausgesucht wegen ihrem API Zugriff. So können wir nach einer Prüfung aus Airtable heraus automatisch Rechnungen erstellen. Auch Zertifikate erstellen wir direkt mittels den Daten in Airtable. So können viele manuelle Schritte vermieden und Zeit eingespart werden.
+
+<img src={roofs} alt="Dächerübersicht" />

@@ -1,0 +1,56 @@
+import CaseStudyDashboard from "@/components/CaseStudyDashboard";
+import { andreaskeller } from "@/authors";
+import image from "./cineequipment-1.png";
+import equipment from "./cineequipment-2.png";
+import product from "./cineequipment-3.png";
+import profile from "./cineequipment-4.png";
+
+export const meta = {
+  title: "CINE.EQUIPMENT: Wo Kreative und Equipment aufeinander treffen",
+  description: `Vermiete oder Miete professionelles Filmequipment in deiner Stadt`,
+  date: "2017-01-01T00:00:00.000Z",
+  authors: [andreaskeller],
+  image,
+  work: "Mitgründer, Entwicklung Platform",
+  technology: "JavaScript Backend, Next.js/React Frontend",
+  year: 2017,
+  websiteTitle: "cine.equipment",
+  websiteUrl: "https://cine.equipment",
+};
+
+<!--excerpt-->
+
+Vermiete oder Miete professionelles Filmequipment in deiner Stadt.
+
+<!--/excerpt-->
+
+<CaseStudyDashboard
+  lang="de"
+  work={meta.work}
+  technology={meta.technology}
+  websiteTitle={meta.websiteTitle}
+  websiteUrl={meta.websiteUrl}
+  year={meta.year}
+/>
+
+### Vermiete oder Miete professionelles Film- und Fotoequipment in deiner Nähe
+
+Zusammen mit Fabian Steiner, Filmemacher aus Bern, habe ich Anfangs 2017 einen Marktplatz für professionelles Kameraequipment gestartet.
+
+Nach der Evaluation von verschiedenen Lösungen, insbesondere Sharetribe einer Marktplatz als Dienstleistung Software haben wir uns doch entschieden selber eine Platform zu entwickeln, da unsere Ideen über die Funktionalität von Sharetribe hinausgingen und eine Zahlungsabwicklung nur über Paypal möglich war.
+
+Die Platform habe ich mit React und Next.js und einem JavaScript Backend (GraphQL Server) umgesetzt. Die Platform haben wir soweit entwickelt, dass sich Benutzer anmelden konnten und sowohl Material erfassen konnten wie auch andere Benutzer kontaktieren um Material zu bestellen.
+
+Da wir die ganze Entwicklung neben Vollzeit Jobs vornahmen kamen wir nicht allzu schnell vorwärts. In der Zwischenzeit hatte sich auch Sharetribe weiterentwickelt, insbesondere war nun neu auch eine Zahlungsabwicklung über Stripe möglich. So sind wir nun zum Schluss gekommen, doch auf Sharetribe zu wechseln und sind momentan daran genügend Filmmaterial auf die Platform zu bringen.
+
+<img src={equipment} alt="Equipmentliste" />
+
+Equipmentliste filterbar via Kategorien
+
+<img src={product} alt="Produktdetailseite" />
+
+Produktdetailseite mit Möglichkeit Vermieter zu kontaktieren
+
+<img src={profile} alt="Profilseite" />
+
+Profilseite eines Vermieters

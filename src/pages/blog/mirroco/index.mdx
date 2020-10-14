@@ -1,0 +1,63 @@
+import CaseStudyDashboard from "@/components/CaseStudyDashboard";
+
+import { andreaskeller } from "@/authors";
+import image from "./mirroco-2.png";
+import homepage from "./mirroco-1.png";
+import report from "./mirroco-3.png";
+import blog from "./mirroco-4.png";
+
+export const meta = {
+  title: "mirroco: Online Tool für Lernstandserfassung",
+  description: `Mirroco ist ein Netzwerk von Menschen, welche sich für eine nachhaltige und selbstgesteuerte Lernkultur einsetzen. Sie bieten eine Palette von Möglichkeiten an, um sich mit nachhaltigen Lernformen auseinanderzusetzen und einen individuell passenden Weg zu gehen.`,
+  date: "2018-01-01T00:00:00.000Z",
+  authors: [andreaskeller],
+  image,
+  work: "UI/UX Design, Entwicklung Backend & Frontend",
+  technology: "JavaScript Backend, Next.js/React Frontend",
+  year: 2018,
+  websiteTitle: "www.mirroco.ch",
+  websiteUrl: "https://www.mirroco.ch",
+};
+
+<!--excerpt-->
+
+Mirroco ist ein Netzwerk von Menschen, welche sich für eine nachhaltige und selbstgesteuerte Lernkultur einsetzen. Sie bieten eine Palette von Möglichkeiten an, um sich mit nachhaltigen Lernformen auseinanderzusetzen und einen individuell passenden Weg zu gehen.
+
+<!--/excerpt-->
+
+<CaseStudyDashboard
+  lang="de"
+  work={meta.work}
+  technology={meta.technology}
+  websiteTitle={meta.websiteTitle}
+  websiteUrl={meta.websiteUrl}
+  year={meta.year}
+/>
+
+### Plattform für selbstgesteuerte Lernkulturen
+
+Mirroco ist ein Netzwerk von Menschen, welche sich für eine nachhaltige und selbstgesteuerte Lernkultur einsetzen. Sie bieten eine Palette von Möglichkeiten an, um sich mit nachhaltigen Lernformen auseinanderzusetzen und einen individuell passenden Weg zu gehen.
+
+<!-- end -->
+
+Mit der Einführung vom Lehrplan 21 stehen insbesondere Homeschooler unter Druck einmal jährlich dem Schulinspektor einen Bericht über den Lernstand ihrer Kinder abzugeben. Die Auftraggeberin Paula Duwan, selber Homeschoolerin von zwei Kinder hat ein Excel Tool erstellt mit welchem sie anhand des Grundanspruchs des Lehrplan 21 den Lernstand eines Kindes erfassen kann. Nach erfolgreichen Tests mit anderen Homeschoolern war der nächste Schritt das Tool zu professionalisieren und in eine Webapp zu verwandeln.
+
+In einer ersten Phase ging es darum einen ersten Prototypen des Tools zu entwickeln um technische Schwierigkeiten besser einschätzen zu können. Ich verwendete Next.js und React als Frontend mit einem Custom JavaScript Backend.
+
+Als nächstes konzentrierten wir uns darauf die Marketingwebseite online zu stellen. Diese habe ich mittels einer Headless Wordpress Instanz umgesetzt und in die bestehende Next.js App integriert.
+
+Nach etlichen Iterationen und Tests mit Kunden konnten wir schlussendlich auch das Online Tool rechtzeitig zur Deadline im September 2018 abschliessen.
+
+Da ein solches Projekt nicht mit dem Launch abgeschlossen ist, begleite ich das Projekt weiterhin.
+
+<img src={homepage} alt="mirroco Homepage" />
+
+Alle Seiten sind durch die Kundin in Wordpress selber editierbar. Als Editor wird Gutenberg eingesetzt mit einigen Custom Blocks.
+
+<img src={report} alt="mirroco Lernbericht" />
+
+Durch das Einschätzen des Lernfortschritts der Kinder kann schlussendlich ein PDF Bericht erstellt werden mit Überblick über Aktivitäten und Diagrammen für einen schnellen Überblick des Lernstands des Kindes.
+
+<img src={blog} alt="mirroco Blog" />
+
+Auf dem Blog werden laufend neue Beiträge zur Lernkultur, Freiem Lernen, Lehrplan 21 und verwandten Themen veröffentlicht.

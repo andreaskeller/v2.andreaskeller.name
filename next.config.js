@@ -26,6 +26,26 @@ module.exports = withBundleAnalyzer({
   experimental: {
     modern: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/projekte",
+        destination: "/blog",
+      },
+      {
+        source: "/projekte/:slug",
+        destination: "/blog/:slug",
+      },
+      {
+        source: "/kontakt",
+        destination: "/contact",
+      },
+      {
+        source: "/angebote",
+        destination: "/",
+      },
+    ];
+  },
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(svg|png|jpe?g|gif|mp4)$/i,
