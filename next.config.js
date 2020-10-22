@@ -26,23 +26,27 @@ module.exports = withBundleAnalyzer({
   experimental: {
     modern: true,
   },
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: "/projekte",
         destination: "/blog",
+        permanent: true,
       },
       {
         source: "/projekte/:slug",
         destination: "/blog/:slug",
+        permanent: true,
       },
       {
         source: "/kontakt",
         destination: "/contact",
+        permanent: true,
       },
       {
         source: "/angebote",
         destination: "/",
+        permanent: true,
       },
     ];
   },

@@ -25,10 +25,13 @@ export default function Blog() {
           <meta property="og:url" content="https://andreaskeller.name" />
           <meta property="og:type" content="article" />
           <meta property="og:title" content="Blog – Andreas Keller" />
-          <meta property="og:description" content="" />
+          <meta
+            property="og:description"
+            content="I write about building modern websites with Next.js"
+          />
           <meta property="og:image" content={`https://andreaskeller.name${twitterCard}`} />
           <title>Blog – Andreas Keller</title>
-          <meta name="description" content="" />
+          <meta name="description" content="I write about building modern websites with Next.js" />
         </Head>
         {posts.map(({ link, module: { default: Component, meta } }) => {
           return (
